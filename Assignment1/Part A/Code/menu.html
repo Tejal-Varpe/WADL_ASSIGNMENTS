@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+
+    <!--bootstrap, css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--CSS-->
+    <style>
+        body {
+            background-color: rgb(201, 208, 231);
+        }
+        
+        .col1 img:hover,
+        .order:hover {
+            transform: scale(1.1);
+        }
+        
+        .container {
+            padding-top: 30px;
+            width: 100% !important;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .card {
+            background-color: rgb(40, 40, 80);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .m {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin: 10px;
+        }
+        
+        .card .col2 {
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function price1() {
+            var a = '300';
+            document.getElementById("price1").innerHTML = "$" + a + " Total Price";
+        }
+
+        function price2() {
+            var a = '450';
+            document.getElementById("price2").innerHTML = "$" + a + " Total Price";
+        }
+
+        function price3() {
+            var a = '730';
+            document.getElementById("price3").innerHTML = "$" + a + " Total Price";
+        }
+
+        function price4() {
+            var a = '835';
+            document.getElementById("price4").innerHTML = "$" + a + " Total Price";
+        }
+
+        function price5() {
+            var a = '550';
+            document.getElementById("price5").innerHTML = "$" + a + " Total Price";
+        }
+
+        function price6() {
+            var a = '670';
+            document.getElementById("price6").innerHTML = "$" + a + " Total Price";
+        }
+    </script>
+
+</head>
+
+<!--Start of body-->
+
+<body>
+
+    <!--Start of container-->
+    <div class="container" id="content2" style="padding-bottom: 20px;">
+        <div class="head" style="padding-left: 10px;">
+            <h3 style="color: black;"><b>Top Favourites Food</b></h3>
+        </div>
+
+        <div class="col-md-6 col-md-12" id="dishes" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; align-items: center; border-radius: 30px; line-height: 0.3">
+
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/spag.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Spagetti</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price1()">See Price</button><br><br><br><br>
+                        <p id="price1" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="font-size: 15px;"> | (6,234)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-12" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; display: flex; align-items: center; border-radius: 30px; line-height: 0.3">
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/noodles.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Noodles</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price2()">See Price</button><br><br><br><br>
+                        <p id="price2" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span>&star;</span>
+                            <span style="font-size: 15px;"> | (3,456)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-12" id="dishes" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; display: flex; align-items: center; border-radius: 30px; line-height: 0.3">
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/pasta.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Pasta</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price3()">See Price</button><br><br><br><br>
+                        <p id="price3" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="font-size: 15px;"> | (6,234)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-12" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; display: flex; align-items: center; border-radius: 30px; line-height: 0.3">
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/paneer.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Shahi Paneer</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price4()">See Price</button><br><br><br><br>
+                        <p id="price4" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span>&star;</span>
+                            <span style="font-size: 15px;"> | (4, 678)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-12" id="dishes" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; display: flex; align-items: center; border-radius: 30px; line-height: 0.3">
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/noodles2.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Noodles</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price5()">See Price</button><br><br><br><br>
+                        <p id="price5" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="font-size: 15px;"> | (7,216)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-12" style="padding-top: 30px;">
+            <div class="card" style="min-height: 300px; display: flex; align-items: center; border-radius: 30px; line-height: 0.3">
+                <div class="m">
+                    <div class="col1">
+                        <img src="Images/rice3.jpg " width="180rem" height="180px" style="border-radius: 20px;">
+                    </div>
+                    <div class="col2" style="padding-left: 20px;">
+
+                        <p style="color: white; font-family:'Courier New', Courier, monospace"><b>Rice</b></p>
+                        <hr>
+                        <button id="price" style="font-size: 15px; border-radius: 20px; background-color: rgb(238, 190, 32); border: none; height: 23px; width: 90px; color: black" onClick="price6()">See Price</button><br><br><br><br>
+                        <p id="price6" style="font-size: 15px; color: rgb(146, 218, 146)"></p><br><br>
+
+                        <div class="ratings " style="margin-right: 20px; border-radius: 10px; height: 15px; font-size: 20px; ">
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span style="color:orange; ">&starf;</span>
+                            <span>&star;</span>
+                            <span style="font-size: 15px;"> | (2,897)</span>
+                        </div><br><br><br>
+                        <center><button class="order" style="font-size: 15px; border-radius: 5px; background-color: red; border: none; height: 23px; width: 70px;">Order</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

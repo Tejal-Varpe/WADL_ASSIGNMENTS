@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+
+    <!--CSS for icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--bootstrap, css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+    <!--CSS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: rgb(201, 208, 231);
+        }
+        /*Media screen*/
+        
+        @media screen and (max-width: 767px) {
+            .container .row .card {
+                margin-top: 10px;
+            }
+            #content1 .row .card {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            #tab .card {
+                margin-right: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 2000px) {
+            #dnghclp {
+                max-height: 350px;
+            }
+            #can {
+                max-height: 800vh;
+            }
+            #ch {
+                max-height: 600vh;
+            }
+        }
+        
+        @media screen and (max-width: 458px) {
+            .card-body {
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 300px;
+            }
+            .card {
+                margin-bottom: 30px;
+            }
+            .card-body .col2 {
+                margin-right: auto;
+            }
+            #ch {
+                margin-top: 30px;
+            }
+            canvas {
+                max-height: 280px;
+                min-height: 260px;
+                min-width: 250px;
+            }
+        }
+        
+        @media screen and (max-width: 993px) {
+            #ch {
+                margin-top: 30px;
+            }
+        }
+        
+        .card-body {
+            display: flex;
+        }
+        
+        .col2 {
+            margin-left: auto;
+        }
+        
+        .side_nav {
+            position: fixed;
+            background-color: rgb(40, 40, 80);
+            z-index: 1;
+            width: 200px;
+            padding-top: 50px;
+            height: 100%;
+            overflow: auto;
+            transition: 0.5s;
+        }
+        
+        .side_nav a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #ffff;
+            padding-left: 45px;
+            padding-right: auto;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(82, 78, 128);
+            border-radius: 10px;
+            color: #ffff;
+        }
+        
+        .side_nav a:hover {
+            background-color: rgb(82, 78, 128);
+            color: #ffff;
+            border-radius: 10px;
+        }
+        
+        .menu {
+            font-size: 18px;
+        }
+        
+        .header {
+            /*background-color: rgb(83, 204, 198);*/
+            padding-left: 40px;
+            color: rgb(5, 5, 5);
+        }
+        
+        .nav {
+            float: right;
+        }
+        
+        .search img {
+            width: 30px;
+            height: 28px;
+            margin-right: 5px;
+            margin-left: -5px;
+            margin-top: -5px;
+        }
+        
+        .container {
+            width: 100% !important;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        i {
+            padding-right: 8px;
+            color: #ffff;
+        }
+        
+        .card {
+            position: relative;
+            background-color: rgb(40, 40, 80);
+            color: #fff;
+            /* padding-left: 20px; */
+            max-height: 270px;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        
+        .col1 {
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .col2 {
+            float: right;
+            text-align: center;
+            transition: 0.5s all ease-in-out;
+        }
+        
+        .col2 h2:hover {
+            transform: scale(1.2);
+        }
+        
+        #myChart {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .container1 {
+            position: relative;
+            margin-top: 4%;
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+
+<!--Start of body-->
+
+<body>
+
+    <!--Start of main container-->
+    <div class="container1">
+
+        <!--Start of sub container 1-->
+        <div class="container" id="content1">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card" id="card1">
+                        <div class="card-body">
+                            <div class="col1 " style="padding-top: 45px;"><i style="font-size: 40px; color: rgb(74, 199, 74)" class="fa fa-dollar"></i></div>
+                            <div class="col2 " style="padding-right: 12px; padding-top: 15px; ">
+                                <h2>22.3 k</h2>
+                                <p>Total Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="col1 " style="padding-top: 45px; "><i style="font-size:40px; color: rgb(220, 223, 78)" class="fa fa-cutlery "></i></div>
+                            <div class="col2 " style="padding-right: 12px; padding-top: 15px; ">
+                                <h2>55</h2>
+                                <p>Total Menus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="col1 " style="padding-top: 45px; "><i style="font-size:40px; color: rgb(194, 68, 68)" class="fa fa-shopping-cart "></i></div>
+                            <div class="col2 " style="padding-right: 12px; padding-top: 15px; ">
+                                <h2>72</h2>
+                                <p>Total Orders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="col1 " style="padding-top: 45px; "><i style="font-size:40px; color: rgb(111, 111, 196)" class="fa fa-user "></i></div>
+                            <div class="col2 " style="padding-right: 12px; padding-top: 15px; ">
+                                <h2>120</h2>
+                                <p>Total Visitors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of sub container 1-->
+
+        <!--start of sub container 2-->
+        <div class="container" id="content2" style="padding-top: 30px;">
+            <div class="row">
+
+                <!--Pie chart-->
+                <div class="col-md-4 col-md-12" style="color: #fff; ">
+                    <div class="card" id="can" style="background-color: rgb(40, 40, 80); width: 100%; min-height: 430px; max-height: 600px; ">
+                        <div class="ibox">
+                            <div class="ibox-title" style="padding-top: 15px;">
+                                <h5 style="text-align: center; font-size: 17px;">Top selling dishes</h5>
+                                <hr>
+                            </div>
+                            <div class="ibox-content">
+                                <div style="padding-bottom: 20px;">
+                                    <canvas id="dnghclp" height="250"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--pie chart js-->
+                <script>
+                    var pendchart1 = {
+                        labels: ["Indian Dishes", "Chinese Dishes", "Italian Dishes"],
+
+                        datasets: [{
+                            data: [50, 30, 35],
+                            backgroundColor: ["rgb(220, 223, 78)", "rgb(111, 111, 196)", "rgb(194, 68, 68)", "#ff704d", "#ffff4d"]
+                        }]
+                    };
+                    var doughnpending = {
+                        responsive: true
+                    };
+                    var ctx6 = document.getElementById("dnghclp").getContext("2d");
+                    new Chart(ctx6, {
+                        type: 'doughnut',
+                        data: pendchart1,
+                        options: doughnpending,
+                        options: {
+                            legend: {
+                                labels: {
+                                    fontColor: 'white',
+                                },
+                            }
+                        },
+                    });
+                </script>
+
+                <!--line chart-->
+                <div class="col-md-8 col-md-12">
+                    <div class="card" id="ch" style="min-height: 400px; background-color: rgb(40, 40, 80);  max-height: 433px; ">
+                        <canvas id="myChart" style="min-width: 20vh; min-height: 440px; max-height: 480px; padding: 20px;"></canvas>
+                    </div>
+                </div>
+
+                <!--line chart js-->
+                <script>
+                    var xValues = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'];
+                    var yValues = [7, 8, 8, 8, 9, 10, 10, 11, 13, 13, 14, 15];
+
+                    new Chart("myChart", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                fill: false,
+                                lineTension: 0,
+                                backgroundColor: "white",
+                                borderColor: "green",
+                                data: yValues,
+                            }],
+                        },
+                        options: {
+                            legend: {
+                                display: false
+                            },
+
+                            title: {
+                                display: true,
+                                text: 'Monthly Sales Stats (Sales in k)',
+                                padding: 20,
+                                fontColor: 'White',
+                                fontSize: 15,
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        min: 6,
+                                        max: 16,
+                                        fontColor: 'white',
+                                    },
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        fontColor: 'white',
+                                    },
+                                }],
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- End of main container-->
+
+</body>
+
+</html>

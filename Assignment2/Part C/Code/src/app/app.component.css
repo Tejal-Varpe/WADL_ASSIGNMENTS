@@ -1,0 +1,30 @@
+h1, nav{
+    text-align: center;
+}
+
+a{
+    padding: 10px;
+    border: 0.5px black solid;
+    margin-right: 15px;
+    text-decoration: none;
+
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: rgb(177, 177, 177);
+    text-decoration: none;
+  }
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Website Using JQuery Mobile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<style>
+	#showcase_title{
+		text-align: center;
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.text_secondary {
+		color: grey;
+	}
+
+	.banner_img{
+		width: 100%;
+	}
+</style>
+
+<body>
+
+	<div data-role="page" id="home">
+		<div data-role="footer" data-theme="a">
+			<h1>MyWebsite</h1>
+		</div>
+		
+		<div data-role="content" >
+			<div>
+				<h1 id="showcase_title">Learn and Grow More</h1>
+				<p id="showcase_title">Develop a Passion for Learning,
+					You will Never Cease to Grow.</p><br>
+			</div>
+			<center>
+			<div id="con">
+				<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Web Development</a>
+				<div data-role="popup" id="popupPadded" class="ui-content">
+					<p>Login to Access</p>
+				</div>
+	
+				<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Marketing</a>
+				<div data-role="popup" id="popupPadded" class="ui-content">
+					
+				</div>
+				<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Robotics</a>
+				<div data-role="popup" id="popupPadded" class="ui-content">
+					
+				</div>
+				<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Software</a>
+				<div data-role="popup" id="popupPadded" class="ui-content">
+					
+				</div>
+				<a href="#popupPadded" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Content Writing</a>
+				<div data-role="popup" id="popupPadded" class="ui-content">
+					
+				</div>
+			</div>
+
+			<a href="#DialogBox" data-rel="popup" 
+            data-position-to="window" data-transition="pop"
+            class="ui-btn ui-corner-all ui-shadow ui-btn-inline 
+           ui-btn-b">
+		   Access The Resources
+        </a>
+          
+        <div data-role="popup" id="DialogBox" 
+            data-overlay-theme="b" data-theme="b" 
+            data-dismissible="false"
+            style="max-width:400px;">
+              
+            <div data-role="header" data-theme="a">
+                <h1>Access</h1>
+            </div>
+              
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">
+                    Do you wish to Access the resources?
+                </h3>
+                  
+                <a href="#" class="ui-btn ui-corner-all 
+                    ui-shadow ui-btn-inline ui-btn-b" 
+                    data-rel="back">Login
+                </a>
+                  
+                <a href="#" class="ui-btn ui-corner-all 
+                    ui-shadow ui-btn-inline ui-btn-b" 
+                    data-rel="back" data-transition="flow">
+                    Register
+                </a>
+            </div>
+        </div>
+	
+		</center>
+		<center>
+			<div data-role="collapsible" id="number1" class="ui-btn-inline">
+				<h3>Steps to Access</h3>
+				<p>1. Login/Register</p>
+				<p>2. Go to the checkout.</p>
+				<p>3. Choose the desired domain.</p>
+				<p>4. Get Access to the domain.</p>
+			 </div>
+		</center>
+		</div>
+
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<!-- About Page -->
+	<div data-role="page" id="About">
+
+		<div data-role="header" data-theme="a">
+			<h1>MyWebsite</h1>
+		</div>
+
+		<div data-role="content" class="animated bounce">
+			<div class="main_content">
+				<p class="text_secondary">
+					We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our
+					curated collection of business and technical courses help companies, governments, and nonprofits
+					go further by placing learning at the center of their strategies.
+				</p>
+			</div>
+
+			<div>
+				<img class="banner_img" src="./Images/about.jpg">
+			</div>
+		</div>
+
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!--Assignment 1 : A part
+    Task: to create a responsive web page for admin dashboard
+    Website: Restaurant admin dashboard-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Admin Dashboard</title>
+
+    <!--CSS for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JS-->
+    <script>
+        function openNav() {
+            document.getElementById("nav").style.width = "250px";
+            document.getElementById("nav").style.width = "15%";
+            document.getElementById("admin").style.width = "85%";
+            document.getElementById("nav").style.display = "block";
+            document.getElementById("head").style.marginLeft = "15%";
+        }
+
+        function closeNav() {
+            // document.getElementById("nav").style.width = "0";
+            document.getElementById("nav").style.display = "none";
+            document.getElementById("admin").style.width = "100%";
+            document.getElementById("head").style.marginLeft = "0%";
+        }
+    </script>
+
+    <!--CSS-->
+    <style>
+        /*For font family*/
+        
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+        
+        .right h2 {
+            font-family: 'Akaya Telivigala', cursive;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        iframe {
+            height: 100vh;
+            width: 100%;
+            padding-top: 60px;
+        }
+        
+        .left .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .left {
+            position: fixed;
+            width: 15%;
+            float: left;
+            background-color: rgb(40, 40, 80);
+            color: #ffff;
+            font-family: 'Karla', sans-serif;
+            padding-top: 60px;
+            height: 100%;
+        }
+        
+        .left i {
+            color: #fff;
+            padding-right: 5px;
+        }
+        
+        .right {
+            width: 85%;
+            float: right;
+        }
+        
+        .left .navbar {
+            display: flex;
+            justify-content: center;
+            line-height: 3.2;
+            align-items: center;
+        }
+        
+        #sideNav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+            padding: 10px;
+        }
+        
+        #sideNav a:hover {
+            background-color: rgb(82, 78, 128);
+            border-radius: 15px;
+        }
+        
+        .left h4 {
+            font-size: 28px;
+            padding-top: 10px;
+        }
+        
+        .search input {
+            border-color: grey;
+            border-radius: 13px;
+            padding-left: 15px;
+            font-size: 16px;
+        }
+        
+        .search i {
+            padding-right: 20px;
+            padding-left: 2px;
+            color: grey;
+        }
+        
+        .header {
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-left: 15%;
+        }
+        
+        #hright {
+            margin-left: auto;
+        }
+        
+        #toggle,
+        #close {
+            display: none;
+        }
+        
+        @media screen and (max-width: 1400px) {
+            #toggle,
+            #close {
+                display: initial;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<!--Start of body-->
+
+<body>
+
+    <!--Start of left Column-->
+    <div class="left" id="nav">
+        <center><i class="fa fa-cutlery" style="font-size: 35px;"></i>
+            <h4>Welcome!</h4>
+        </center>
+
+        <div class="navbar" id="sideNav">
+            <div class="menu">
+                <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+                <a href="admin.html" target="iright"><i class="fa fa-line-chart"></i>Statistics</a><br>
+                <a href="menu.html" target="iright"><i class="fa fa-cutlery"></i>Menu</a><br>
+                <a href="order.html" target="iright"><i class="fa fa-user"></i>Order</a><br>
+                <a href="review.html" target="iright"><i class="fa fa-shopping-cart"></i>Reviews</a><br>
+                <a href="about.html" target="iright"><i class="fa fa-check"></i>About</a>
+            </div>
+        </div>
+    </div>
+    <!--End of left column-->
+
+    <!--Start of right Column-->
+    <div class="right" id="admin">
+
+        <!--header start-->
+        <div class="header" id="head">
+            <div id="hleft">
+                <h2 style="padding-left:10px;"><span id="toggle" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span> Food <i class="fa fa-cutlery" style="color: black;"></i> World</h2>
+            </div>
+            <div id="hright">
+                <div class="search">
+                    <input type="text" placeholder="Search for a dish!"><a href="#"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+
+        <!--iframe start-->
+        <div class="iframe">
+            <iframe name="iright" frameborder="0" src="admin.html">
+                <p>This</p><br>
+                <p>Is</p><br>
+                <p>Iframe</p>
+            </iframe>
+        </div>
+        <!--iframe end-->
+
+    </div>
+    <!--End of right Column-->
+
+</body>
+<!--End of body-->
+
+</html>
